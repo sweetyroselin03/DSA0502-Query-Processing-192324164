@@ -1,0 +1,8 @@
+import xml.etree.ElementTree as ET
+
+xml_data = '<person><name>Alice</name><age>25</age></person>'
+
+root = ET.fromstring(xml_data)
+
+print("Name:", root.find('name').text)
+print("Age:", root.find('age').text)
